@@ -1,6 +1,18 @@
-import { saludar } from './js/componentes';
+import { crearTodoHTML, saludar } from './js/componentes';
 import './styles.css';
+import {Todo, TodoList} from './classes';
 
-const nombre = 'Fernando';
+export const todoList = new TodoList();
 
-saludar( nombre );
+for( const todo of todoList.todos )
+{
+    crearTodoHTML(todo);
+}
+
+/*
+localStorage.setItem("llave","abc123");
+
+setTimeout(()=>{
+    localStorage.removeItem("llave");
+},3000);
+*/
